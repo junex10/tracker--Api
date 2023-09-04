@@ -3,9 +3,6 @@ import { Socket, Server } from 'socket.io';
 import SocketEvents from './socket.events';
 import { SocketService } from './socket.service';
 import fetch from 'cross-fetch';
-import {
-   NewMessageDTO
-} from './socket.entity';
 
 const HEADERS = {
    'Accept': 'application/json',
@@ -21,11 +18,4 @@ export class SocketController {
 
    }
 
-   // Chat
-
-   @SubscribeMessage(SocketEvents.PATIENT.CHAT.NEW_MESSAGE)
-   async newMessage(@MessageBody() request: NewMessageDTO) {
-      const message = await this.socketService.newMessage(request);
-      this.server.emit(SocketEvents.PATIENT.CHAT.NEW_MESSAGE, message);
-   }
 }

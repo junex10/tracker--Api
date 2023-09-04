@@ -14,14 +14,8 @@ import { ScheduleModule } from '@nestjs/schedule';
 
 import {
   AuthModule,
-  PetitionModule,
-  NotificationsModule,
-  ProfileModule,
-  PatientModule,
-  AdminModule,
-  BossModule,
-  DoctorModule,
-  SecretaryModule
+  NotificationsModule
+
 } from 'src/controllers';
 
 // Models
@@ -40,18 +34,7 @@ import {
   Process,
 	ChatSession,
 	Chats,
-	ChatUsers,
-	EventsType,
-	Events,
-	PaymentsType,
-	Payments,
-	MedicalAppointments,
-	CashMovementsType,
-	MoneyMovements,
-	Specializations,
-	Visits,
-  AppointmentsControl,
-  AttachmentsChats
+	ChatUsers
 } from './models';
 
 @Module({
@@ -74,18 +57,7 @@ import {
         Process,
         ChatSession,
         Chats,
-        ChatUsers,
-        EventsType,
-        Events,
-        PaymentsType,
-        Payments,
-        MedicalAppointments,
-        CashMovementsType,
-        MoneyMovements,
-        Specializations,
-        Visits,
-        AppointmentsControl,
-        AttachmentsChats
+        ChatUsers
       ]
     }),
     MailerModule.forRoot(MAIL_CONFIG),
@@ -102,14 +74,7 @@ import {
     }),
     AuthModule,
     SocketModule,
-    PetitionModule,
     NotificationsModule,
-    ProfileModule,
-    PatientModule,
-    AdminModule,
-    BossModule,
-    DoctorModule,
-    SecretaryModule,
 
     ScheduleModule.forRoot(),
   ],

@@ -32,29 +32,11 @@ export class User extends Model {
   @BelongsTo(() => Level, 'level_id')
   level: Level;
 
-  @BelongsTo(() => User, 'associated_id')
-  associated: User
-
   @Column
   token: string;
 
   @Column
-  facebook: number;
-
-  @Column
-  google: number;
-
-  @Column
-  google_id: string;
-
-  @Column
-  facebook_id: string;
-
-  @Column
   photo: string;
-
-  @Column
-  logged_in: number;
 
   @Column
   verified: number;
