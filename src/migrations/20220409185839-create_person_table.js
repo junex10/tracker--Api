@@ -22,22 +22,6 @@ module.exports = {
           key: 'id'
         }
       },
-      medical_history: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-      },
-      age: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-      },
-      birthdate: {
-        type: Sequelize.DATE,
-        allowNull: true
-      },
-      document: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
       phone: {
         type: Sequelize.STRING,
         allowNull: true

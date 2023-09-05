@@ -26,31 +26,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true
       },
-      facebook: {
-        type: Sequelize.INTEGER(1),
-        allowNull: true
-      },
-      google: {
-        type: Sequelize.INTEGER(1),
-        allowNull: true
-      },
-      google_id: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
-      facebook_id: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
-      photo: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
-      logged_in: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        default: 0
-      },
       verified: {
         type: Sequelize.INTEGER,
         allowNull: false,

@@ -19,19 +19,10 @@ export class Person extends Model {
   user_id: number;
 
   @Column
-  medical_history: number;
-
-  @Column
-  age: number;
-
-  @Column
-  birthdate: Date;
-
-  @Column
-  document: string;
-
-  @Column
   phone: string;
+
+  @Column
+  photo: string;
 
   @Column
   address: string;

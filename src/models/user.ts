@@ -36,9 +36,6 @@ export class User extends Model {
   token: string;
 
   @Column
-  photo: string;
-
-  @Column
   verified: number;
 
   @Column

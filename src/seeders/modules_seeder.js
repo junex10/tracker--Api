@@ -17,37 +17,9 @@ module.exports = {
       },
       {
         id: 2,
-        name: 'Citas',
-        icon: 'appointments',
-        code: 'appointments',
-        status: Constants.SEEDERS.MODULES_STATUS.AVAILABLE
-      },
-      {
-        id: 3,
         name: 'Chats',
         icon: 'chats',
         code: 'chats',
-        status: Constants.SEEDERS.MODULES_STATUS.AVAILABLE
-      },
-      {
-        id: 4,
-        name: 'Listado de citas del Doctor',
-        icon: 'appointments',
-        code: 'doctor-appointments',
-        status: Constants.SEEDERS.MODULES_STATUS.AVAILABLE
-      },
-      {
-        id: 5,
-        name: 'Estadisticas del Doctor',
-        icon: 'appointments',
-        code: 'doctor-statistics',
-        status: Constants.SEEDERS.MODULES_STATUS.AVAILABLE
-      },
-      {
-        id: 6,
-        name: 'Estadisticas del Sistema',
-        icon: 'statistics',
-        code: 'admin-statistics',
         status: Constants.SEEDERS.MODULES_STATUS.AVAILABLE
       }
     ];

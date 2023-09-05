@@ -37,17 +37,7 @@ module.exports = {
     },
     MODULES: {
       PROFILE: 1,
-      CHAT: 3,
-      APPOINTMENTS: {
-        VIEW_APPOINTMENTS: 2,
-        DOCTOR: {
-          VIEW_APPOINTMENTS: 4,
-          VIEW_STATISTICS: 5
-        }
-      },
-      STATISTICS: {
-        VIEW_STATISTICS: 6
-      }
+      CHAT: 2
     },
     ACTIONS: {
       MAIN: 1,
@@ -55,20 +45,9 @@ module.exports = {
     }
   },
   USERS: {
-    FACEBOOK: {
-      ACCESS: 1,
-      NOT_ACCESS: 0
-    },
-    GOOGLE: {
-      ACCESS: 1,
-      NOT_ACCESS: 0
-    },
     LEVELS: {
       ADMIN: 1,
-      BOSS: 2,
-      DOCTOR: 3,
-      SECRETARY: 4,
-      PATIENT: 5,
+      USER: 2
     },
     STATUS: {
       ACTIVATED: 1,

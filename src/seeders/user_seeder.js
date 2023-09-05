@@ -17,33 +17,9 @@ module.exports = {
       },
       {
         id: 2,
-        email: 'boss@mail.com',
+        email: 'user@mail.com',
         password: bcrypt.hashSync('123456', salt),
-        level_id: Constants.USERS.LEVELS.BOSS,
-        verified: Constants.SEEDERS.USER_VERIFIED.VERIFIED,
-        status: Constants.USERS.STATUS.ACTIVATED
-      },
-      {
-        id: 3,
-        email: 'secretary@mail.com',
-        password: bcrypt.hashSync('123456', salt),
-        level_id: Constants.USERS.LEVELS.SECRETARY,
-        verified: Constants.SEEDERS.USER_VERIFIED.VERIFIED,
-        status: Constants.USERS.STATUS.ACTIVATED
-      },
-      {
-        id: 4,
-        email: 'doctor@mail.com',
-        password: bcrypt.hashSync('123456', salt),
-        level_id: Constants.USERS.LEVELS.DOCTOR,
-        verified: Constants.SEEDERS.USER_VERIFIED.VERIFIED,
-        status: Constants.USERS.STATUS.ACTIVATED
-      },
-      {
-        id: 5,
-        email: 'patient@mail.com',
-        password: bcrypt.hashSync('123456', salt),
-        level_id: Constants.USERS.LEVELS.PATIENT,
+        level_id: Constants.USERS.LEVELS.USER,
         verified: Constants.SEEDERS.USER_VERIFIED.VERIFIED,
         status: Constants.USERS.STATUS.ACTIVATED
       }

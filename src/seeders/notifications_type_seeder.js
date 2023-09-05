@@ -8,7 +8,7 @@ module.exports = {
     const items = [
       {
         id: 1,
-        name: 'Nuevo usuario',
+        name: 'New user',
         code: 'auth/new-user'
       }
     ];
