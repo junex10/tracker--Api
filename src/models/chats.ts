@@ -2,7 +2,6 @@ import { Column, Model, Table, CreatedAt, UpdatedAt, DeletedAt, BelongsTo, HasMa
 import {
   User,
   ChatSession,
-  AttachmentsChats
 } from '.';
 
 @Table({
@@ -17,9 +16,6 @@ export class Chats extends Model {
 
   @BelongsTo(() => User, 'sender_id')
   sender: User;
-
-  @HasMany(() => AttachmentsChats, 'chat_id')
-  attachments_chats: AttachmentsChats[];
 
   @Column
   sender_id: number;

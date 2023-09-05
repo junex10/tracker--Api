@@ -5,7 +5,6 @@ import {
 	ChatSession,
 	Chats,
 	ChatUsers,
-	AttachmentsChats,
 	Level,
 	Person
 } from "src/models";
@@ -30,7 +29,6 @@ export class ChatService {
 		@InjectModel(Chats) private chatModel: typeof Chats,
 		@InjectModel(ChatSession) private chatSessionModel: typeof ChatSession,
 		@InjectModel(ChatUsers) private chatUsersModel: typeof ChatUsers,
-		@InjectModel(AttachmentsChats) private attachmentsChatsModel: typeof AttachmentsChats,
 	) {
 
 	}
@@ -135,7 +133,6 @@ export class ChatService {
 		if (chat) {
 			if (files.length > 0) {
 				const attachment = files.map(item => ({ chat_id: chat.id, attachment: `chat/${item.filename}` }));
-				await this.attachmentsChatsModel.bulkCreate(attachment);
 			}
 			await this.chatUsersModel.update(
 				{

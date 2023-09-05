@@ -7,7 +7,6 @@ import {
   Chats,
   ChatSession,
   ChatUsers,
-  AttachmentsChats
 } from 'src/models';
 
 @Module({
@@ -17,7 +16,6 @@ import {
       Chats,
       ChatSession,
       ChatUsers,
-      AttachmentsChats
     ])
   ],
   controllers: [

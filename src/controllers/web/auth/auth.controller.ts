@@ -56,16 +56,9 @@ export class AuthController {
 					id: user.id,
 					email: user.email,
 					level: user.level,
-					google: user.google,
-					google_id: user.google_id,
-					facebook_id: user.facebook_id,
-					facebook: user.facebook,
-					photo: user.photo,
-					logged_in: user.logged_in,
 					verified: user.verified,
 					status: user.status,
-					person: user.person,
-					associated: user.associated
+					person: user.person
 				};
 				const token = JWTAuth.createToken({ jwtData, key: apiKey });
 				return response.status(HttpStatus.OK).json({
