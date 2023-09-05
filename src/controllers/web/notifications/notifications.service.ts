@@ -18,32 +18,5 @@ export class NotificationsService {
         @InjectModel(Notifications) private notificationsModel: typeof Notifications,
         @InjectModel(User) private userModel: typeof User
     ) { }
-
-    newTreatment = async (request: NotificationDTO) => {
-        const personal = await this.userModel.findAll({
-            where: {
-                [Op.or]: [
-                    {
-                        level_id: Constants.LEVELS.ADMIN
-                    },
-                    {
-                        level_id: Constants.LEVELS.PATIENT
-                    }
-                ]
-            }
-        });
-        const notificationType = await this.notificationsTypeModel.findOne({ where: { code: request.code } });
-        const message = 'Se ha registrado un nuevo tratamiento';
-        personal.map(async value => {
-
-            await this.notificationsModel.create({
-                title: notificationType.name,
-                message,
-                receiver_id: value.id,
-                sender_id: request.user_id,
-                status: Constants.NOTIFICATIONS.STATUS.UNREADED
-            });
-        });
-        return true;
-    }
+  
 }

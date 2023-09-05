@@ -14,16 +14,4 @@ export class NotificationsController {
         private readonly notificationsService: NotificationsService
     ) {}
 
-    @Post('newTreatment')
-    async newTreatment(@Res() response: Response, @Body() request: NotificationDTO) {
-        try {
-            const notification = await this.notificationsService.newTreatment(request);
-            return response.status(HttpStatus.OK).json({
-                notification
-            });
-        }
-        catch(e) {
-            throw new UnprocessableEntityException('Ha ocurrido un error de conexión, intente nuevamente', e.message);
-        }
-    }
 }

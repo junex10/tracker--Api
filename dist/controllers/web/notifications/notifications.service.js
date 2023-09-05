@@ -17,38 +17,11 @@ const common_1 = require("@nestjs/common");
 const sequelize_1 = require("@nestjs/sequelize");
 const models_1 = require("../../../models");
 const utils_1 = require("../../../utils");
-const sequelize_2 = require("sequelize");
 let NotificationsService = class NotificationsService {
     constructor(notificationsTypeModel, notificationsModel, userModel) {
         this.notificationsTypeModel = notificationsTypeModel;
         this.notificationsModel = notificationsModel;
         this.userModel = userModel;
-        this.newTreatment = async (request) => {
-            const personal = await this.userModel.findAll({
-                where: {
-                    [sequelize_2.Op.or]: [
-                        {
-                            level_id: utils_1.Constants.LEVELS.ADMIN
-                        },
-                        {
-                            level_id: utils_1.Constants.LEVELS.PATIENT
-                        }
-                    ]
-                }
-            });
-            const notificationType = await this.notificationsTypeModel.findOne({ where: { code: request.code } });
-            const message = 'Se ha registrado un nuevo tratamiento';
-            personal.map(async (value) => {
-                await this.notificationsModel.create({
-                    title: notificationType.name,
-                    message,
-                    receiver_id: value.id,
-                    sender_id: request.user_id,
-                    status: utils_1.Constants.NOTIFICATIONS.STATUS.UNREADED
-                });
-            });
-            return true;
-        };
     }
 };
 NotificationsService = __decorate([
