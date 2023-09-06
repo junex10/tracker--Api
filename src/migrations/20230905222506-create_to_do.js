@@ -1,36 +1,25 @@
 'use strict';
-const constants = require('../seeders/constants');
+const Constants = require('../seeders/constants');
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    return Promise.all([
-      queryInterface.addColumn(
-        'to_do',
-        'name',
-        {
-          type: Sequelize.STRING,
-          allowNull: true
-        }
-      ),
-      queryInterface.addColumn(
-        'to_do',
-        'attachment',
-        {
-          type: Sequelize.TEXT,
-          allowNull: true
-        }
-      ),
-      queryInterface.addColumn(
-        'to_do',
-        'marked',
-        {
-          type: Sequelize.BOOLEAN,
-          allowNull: true,
-          default: false
-        }
-      ),
-      ...constants.DATES_CONTROL
-    ]);
+    await queryInterface.createTable('to_do', {
+      id: Constants.PRIMARY_KEY,
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      attachment: {
+        type: Sequelize.TEXT,
+        allowNull: true
+      },
+      marked: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        default: true
+      },
+      ...Constants.DATES_CONTROL
+    });
   },
 
   async down (queryInterface, Sequelize) {
