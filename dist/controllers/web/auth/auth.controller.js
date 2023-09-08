@@ -52,7 +52,7 @@ let AuthController = class AuthController {
                 });
             }
             else {
-                return response.status(common_1.HttpStatus.UNPROCESSABLE_ENTITY).json({
+                return response.status(common_1.HttpStatus.OK).json({
                     error: errorMessage
                 });
             }

@@ -1,3 +1,5 @@
+/// <reference types="express-serve-static-core" />
+/// <reference types="multer" />
 import { User, ChatSession, Chats, ChatUsers } from "src/models";
 import { DeleteDTO, GetChatsDTO, GetLogsDTO, NewChatDTO, NewMessageDTO, ViewedDTO } from './chat.entity';
 export declare class ChatService {

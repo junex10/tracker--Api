@@ -4,7 +4,6 @@ export declare class Person extends Model {
     lastname: string;
     user_id: number;
     phone: string;
-    photo: string;
     address: string;
     created_at: Date;
     updated_at: Date;

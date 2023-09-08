@@ -32,10 +32,6 @@ __decorate([
 __decorate([
     sequelize_typescript_1.Column,
     __metadata("design:type", String)
-], Person.prototype, "photo", void 0);
-__decorate([
-    sequelize_typescript_1.Column,
-    __metadata("design:type", String)
 ], Person.prototype, "address", void 0);
 __decorate([
     sequelize_typescript_1.CreatedAt,

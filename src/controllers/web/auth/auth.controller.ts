@@ -69,7 +69,7 @@ export class AuthController {
 				});
 			}
 			else {
-				return response.status(HttpStatus.UNPROCESSABLE_ENTITY).json({
+				return response.status(HttpStatus.OK).json({
 					error: errorMessage
 				});
 			}

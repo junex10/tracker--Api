@@ -22,9 +22,6 @@ export class Person extends Model {
   phone: string;
 
   @Column
-  photo: string;
-
-  @Column
   address: string;
 
   @CreatedAt
